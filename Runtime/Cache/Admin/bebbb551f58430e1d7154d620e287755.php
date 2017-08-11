@@ -108,6 +108,7 @@
 				<th>联系电话</th>
 				<th>地址</th>
 				<th>问题</th>
+				<th>详情</th>
 				<th>时间</th>
 				<th>状态</th>
 				<th>操作</th>
@@ -122,6 +123,7 @@
 						<td><?php echo ($channel["tel"]); ?></td>
 						<td><?php echo ($channel["address"]); ?></td>
 						<td><?php echo ($channel["question"]); ?></td>
+						<td><?php echo ($channel["content"]); ?></td>
 						<td><span><?php echo (time_format($vo["last_login_time"])); ?></span></td>
 						<td><?php echo ($channel["status"]); ?></td>
 						<td>

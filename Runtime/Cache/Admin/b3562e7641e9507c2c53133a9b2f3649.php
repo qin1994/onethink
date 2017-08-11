@@ -117,20 +117,27 @@
 				<input type="text" class="text input-large" name="address" value="<?php echo ((isset($info["address"]) && ($info["address"] !== ""))?($info["address"]):''); ?>">
 			</div>
 		</div>
-		<div class="form-item">
-			<label class="item-label">问题<span class="check-tips"></span></label>
-			<div class="controls">
-				<input type="text" class="text input-large" name="question" value="<?php echo ((isset($info["question"]) && ($info["question"] !== ""))?($info["question"]):''); ?>">
-			</div>
-		</div>
-		<div class="form-item">
+
+        <div class="form-item">
+            <label class="item-label">问题<span class="check-tips"></span></label>
+            <div class="controls">
+                <input type="text" class="text input-large" name="question" value="<?php echo ((isset($info["question"]) && ($info["question"] !== ""))?($info["question"]):''); ?>">
+            </div>
+        </div>
+        <div class="form-item">
+            <label class="item-label">内容<span class="check-tips"></span></label>
+            <div class="controls textarea input-large ">
+                <textarea name="content"> <?php echo ((isset($info["content"]) && ($info["content"] !== ""))?($info["content"]):''); ?></textarea>
+            </div>
+        </div>
+		<!--<div class="form-item">
 			<label class="item-label">时间<span class="check-tips"></span></label>
 			<div class="controls">
 				<input type="text" class="text input-large" name="time" value="<?php echo ((isset($info["time"]) && ($info["time"] !== ""))?($info["time"]):''); ?>">
 			</div>
-		</div>
+		</div>-->
 		<div class="form-item">
-			<label class="item-label">状态<span class="check-tips">（</span></label>
+			<label class="item-label">状态<span class="check-tips"></span></label>
 			<div class="controls">
 				<select name="status" value="<?php echo ((isset($info["status"]) && ($info["status"] !== ""))?($info["status"]):''); ?>">
 					<option value="0">待处理</option>
@@ -140,8 +147,8 @@
 			</div>
 		<div class="form-item">
 			<input type="hidden" name="id" value="<?php echo ((isset($info["id"]) && ($info["id"] !== ""))?($info["id"]):''); ?>">
-			<input type="hidden" name="time" value="<?=time()?>}">
-			<input type="hidden" name="sn" value="<?=date('Ymd',time()).rand(10000,9999);?>}">
+			<!--<input type="hidden" name="time" value="<?=time()?>}">
+			<input type="hidden" name="sn" value="<?=date('Ymd',time()).rand(10000,9999);?>">-->
 			<button class="btn submit-btn ajax-post" id="submit" type="submit" target-form="form-horizontal">确 定</button>
 			<button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
 		</div>
