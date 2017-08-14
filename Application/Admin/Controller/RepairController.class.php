@@ -10,8 +10,8 @@ class RepairController extends AdminController
         $pid = i('get.pid', 0);
         /* 获取频道列表 */
         $map  = array('status' => array('gt', -1), 'pid'=>$pid);
-        $list = M('repairs')->where($map)->select();
-
+        //$list = M('repairs')->where($map)->select();
+        $list = $this->lists('Repairs', $map,'name');
         $this->assign('list', $list);
         $this->assign('pid', $pid);
         $this->meta_title = '导航管理';
